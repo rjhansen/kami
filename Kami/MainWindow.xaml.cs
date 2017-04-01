@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kami
+namespace engineering.hansen.Kami
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,24 @@ namespace Kami
         public MainWindow()
         {
             InitializeComponent();
+            foreach (var s in Keyring.GetCertificateIDs())
+            {
+                keyBox.Items.Add(s);
+            }
+            keyBox.SelectedIndex = 0;
+        }
+
+        private void keyBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            String selection = (String)keyBox.SelectedItem;
+            var c = Keyring.GetCertificate(selection);
+            if (c != null)
+                browser.NavigateToString(c.ToHTML());
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
