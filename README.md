@@ -1,6 +1,4 @@
-﻿# Kami 0.3
-
-## What's a _kami_?
+﻿## What's a _kami_?
 _Kami_ (Japanese, 神) roughly translates as spirit, ghost, or specter.
 
 ## So what's Kami?
@@ -21,7 +19,8 @@ on a certificate but even what algorithms were used in the signing.
 * At least one certificate on your public keyring
 
 ## Do you have an installer for it?
-Not yet.
+Not yet, but you can 
+[download a prebuilt binary](https://github.com/rjhansen/kami/releases/download/0.3/Kami-0.3.zip).
 
 ## How can I check my download?
 The executable code has a proper Authenticode signature on it.  The zipfile
