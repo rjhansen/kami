@@ -1,4 +1,6 @@
-﻿## What's a _kami_?
+﻿# Kami 0.3
+
+## What's a _kami_?
 _Kami_ (Japanese, 神) roughly translates as spirit, ghost, or specter.
 
 ## So what's Kami?
